@@ -1,0 +1,399 @@
+    /* Universal and Body Ajustment */
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    min-height:100%;
+    margin-top: 4rem; 
+    margin-left:7%;
+    margin-right: 7%;
+    margin-bottom: 4rem;;
+    font-family: 'Times New Roman', Times, serif;
+    background: linear-gradient(rgba(250, 242, 213, 0.7),rgba(246, 243, 201, 1));
+    position: relative;
+}
+        /* Header and Navbar ajustment */
+header{
+    padding-bottom: 3em;
+}
+.header-logo{
+    display: block;
+    margin: 0 auto;
+    width: 20rem;
+    padding-bottom: 1.5rem;
+}
+.navbar{
+    width: 100%;
+    height: 3rem;
+    padding-bottom: 2rem;
+    margin-bottom: 0.8rem;
+    margin-left: 5%; 
+}
+.nav-link ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.navbar .nav-link a{
+    text-decoration: none;
+    color: rgba(6, 67, 10, 1);
+    font-size: 1.3rem;
+    font-weight:500;
+    padding: 0.8rem;
+    transform: 2ms ease-in;
+    position:relative;
+}
+.navbar .nav-link a::before{
+    content: '';
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width: 0;
+    height: 0.2rem;
+    background-color: rgba(6, 67, 10, 0.6);
+    transition: all 1.0s ease;   
+}
+.navbar .nav-link a:hover:before{
+    width:100%;
+}
+
+
+/* Main content - SECTION 1 */
+main{
+    padding-bottom:8rem;
+}
+.main-cont{
+    display: flex;
+}
+article{
+    flex:1;
+}
+#home{
+    width:100vw;
+    height: 30rem;
+    margin-bottom: 5em;
+    box-shadow: 0 0 1em 1rem rgba(178, 176, 127, 0.5);
+   
+}
+.banner{
+    width:100vw;
+    height:30rem;
+    object-fit: cover;
+    transition: ease-in 1s; 
+   
+}
+.info-box{
+    width: 30rem;
+    height: 9rem;
+    border: 0.5rem solid rgba(75, 129, 21, 0.7);
+    background-color: rgba(250, 242, 213, 0.7);
+    position: absolute;
+    top:36%;
+    right:0%;
+    z-index:1;
+}
+.info-box h2{
+    font-size: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    letter-spacing: 0.09rem;
+    font-weight: 300;
+    color: rgba(6, 67, 10, 1);
+}
+.info-box p{
+    font-size: 1.2rem;
+    letter-spacing: 0.07rem;
+    padding: 0 1.5rem;
+    text-align: justify;
+}
+.banner:hover{
+    transform: scale(1.1);
+}
+
+/* SECTION 2 */
+.main-cont:last-of-type{
+    margin-left:6%;
+    margin-top:1rem;
+}
+#card-menu, #card-res, #card-about{
+    max-width:30rem;
+    height: 30rem;
+    border-radius: 1rem;
+    padding-bottom: 3rem;
+    margin-left: 3.5rem;
+}
+#card-menu{
+    background-image: url("/img/food2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#card-res{
+    background-image: url("/img/rest-loc1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#card-about{
+    background-image: url("/img/banner-food3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#card-menu .title-hover, #card-res .title-hover, #card-about .title-hover{
+   width:100%; 
+   height: 100%;
+   position:relative;
+   top: 50%;
+   left:0%;
+   text-align: center;
+   visibility: hidden;
+   font-size: 1.5rem;
+   font-weight: 500;
+   transition: ease-in 1s;
+}
+#card-menu div, #card-res div, #card-about div{
+    width:100%; 
+    height: auto;
+    position:relative;
+    top: -30%;
+    left:0%;
+    text-align: center;
+    visibility: hidden;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: ease-in 5ms;
+    background-color: rgba(246, 243, 201, 0.6);
+    letter-spacing: 0.05rem;
+}
+#card-menu div p, #card-res div p, #card-about div p{
+    padding: 1rem 2rem;
+}
+#card-menu a, #card-res a, #card-about a{
+    text-decoration: none;
+    color:  rgba(250, 242, 213, 1);
+}
+#card-menu:hover .title-hover, #card-res:hover .title-hover, #card-about:hover .title-hover{
+    transform: scale(1.5);
+    visibility: visible;
+}
+#card-menu:hover div, #card-res:hover div, #card-about:hover div{
+    visibility: visible;
+}
+
+#card-menu:hover{
+    background: linear-gradient( rgba(0,0,0, 0.3),  rgba(6, 67, 10, 0.3)), url("./img/food2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+#card-res:hover{
+    background: linear-gradient( rgba(0,0,0, 0.3),  rgba(6, 67, 10, 0.3)), url("./img/rest-loc1.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+#card-about:hover{
+    background: linear-gradient( rgba(0,0,0, 0.3),  rgba(6, 67, 10, 0.3)), url("./img/banner-food3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* footer */
+footer{
+    width:100%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    color: rgba(6, 67, 10, 1);
+    position:absolute;
+    bottom:0;
+    padding-top: 5rem;
+    margin:1rem 20rem;
+}
+
+footer div, .footer-logo{
+    flex: 1;
+}
+   
+.footer-logo img{
+    width: 15rem;
+    height:auto;
+}
+/* Media Query - Medium Screens*/
+@media (max-width:1200px){
+    body{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    /* Section 1 */
+    #home{
+        width:100vw;
+        height:30rem;
+    }
+    .banner{
+        width:100%;
+        height:30rem;
+    }
+    .info-box{
+        width:25rem;
+        height:8rem;
+        right:10%;
+    }
+    .info-box h2{
+        font-size: 1.2rem;
+    }
+    .info-box p{
+        font-size: 1rem;
+    }
+    /*Section 2*/
+    #card-menu, #card-res, #card-about{
+        max-width:20rem;
+        height:25rem;
+        margin-left: 1rem;
+    }
+    footer{
+        font-size:1.3rem;
+        margin: 1rem 10rem;
+    }
+}
+/* Media Query - Tablets */
+@media (max-width: 950px){
+    .navbar{
+        margin-left: 0;
+    }
+    /*Section 1*/
+    .main-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .main-cont:first-of-type{
+        margin-bottom: 15rem;
+    }
+    #home{
+        height: 15rem;
+        padding-bottom: 3rem;
+    }
+    .banner{
+        max-width:100%;
+        height: 33rem;
+    }
+    .info-box{
+        width:80%;
+        height:auto;
+        position: absolute;
+        top:30rem;
+        right:10%;
+        z-index:1;
+        border: 0.2rem solid rgba(75, 129, 21, 0.5);
+        background-color: rgba(250, 242, 213, 0.6);
+        padding-bottom: 0.5rem;
+    }
+    .info-box h2{
+        font-size:1.2rem;
+    }
+    .info-box p{
+        font-size: 1rem;
+    }
+    .banner:hover{
+        transform: scale(1.06);
+    }
+    /* Section 2*/
+    .main-cont:last-of-type{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:2rem;
+        margin-top: 8rem;
+        margin-right: 3rem;
+    }
+    #card-menu, #card-res, #card-about{
+        width:28rem;
+        height:28rem;
+    }
+    footer{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.2rem;
+        margin: 1.5rem auto;
+    }
+
+}
+
+/* Media Query - mobile */
+@media (max-width: 450px){
+      /* Navbar*/
+    .navbar{
+        margin-left: 0;
+    }
+    .navbar .nav-link a{
+        font-size: 1rem;
+    }
+    .main-cont{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    /*Section 1*/
+
+    .main-cont:first-of-type{
+        margin-bottom: -1rem;
+    }
+    #home{
+        height: 15rem;
+    }
+    .banner{
+        max-width: 100%;
+        height: 18rem;
+    }
+    .info-box{
+        max-width:100%;
+        height:auto;
+        position: absolute;
+        top:17%;
+        right:13%;
+        z-index:1;
+        border: 0.2rem solid rgba(75, 129, 21, 0.5);
+        background-color: rgba(250, 242, 213, 0.6);
+        padding-bottom: 0.5rem;
+    }
+    .info-box h2{
+        font-size:1rem;
+    }
+    .info-box p{
+        font-size: 0.8rem;
+    }
+    .banner:hover{
+        transform: scale(1.05);
+    }
+    .main-cont:last-of-type{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap:2rem;
+        margin-right: 3rem;
+        margin-top:1rem;
+
+    }
+    /*Section 2*/
+    #card-menu, #card-res, #card-about{
+        width:20rem;
+        height:20rem;
+    }
+    footer{
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    footer div{
+        margin: 0 auto;
+    }
+}
